@@ -30,6 +30,7 @@ function events(){ // função onde vai ficar todos os eventos para o sistema
 
     // chamada para abrir as tarefas do dia
     jQuery( ".box-details-tasks .exit-box" ).on( "tap", function( event ) {
+        $('.box-details-tasks').remove();
         controllers.page(controllers.baseURL()+"includes/page.view.tasks.html", ".body-contents");
     });
 
