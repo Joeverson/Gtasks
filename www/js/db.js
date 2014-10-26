@@ -1,0 +1,1 @@
+var db = window.openDatabase("ManagerTask", "1.0", "Test DB", 1000000);

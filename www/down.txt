@@ -1,0 +1,19 @@
+** bootstrap - atualmente esta usando CDN.
+** jquery mobile - esta usando CDN baixar depois
+
+
+------------ para fazer no body; e no menu usa o ira usar um de width 150px
+margin-left: 150px;
+
+************************************--- class defaults
+
+** body-contents - class default for insert contents
+
+
+
+&&&&&&&&&&&&&&&&&&&---- documentation of controllers ----&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+controllers.page(URL, Selector, [add]);
+---> URL: url do arquivo que vai ser carregado
+---> selector: seletor onde as coisas vão ser carregados
+---> add: para adicionar o conteudo sobre o já existente

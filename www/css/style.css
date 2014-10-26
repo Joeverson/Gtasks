@@ -1,0 +1,227 @@
+body{
+
+    background: url("../images/ti.png");
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: OpenLight;
+
+}
+.box-all{
+    margin-top: 60px;
+}
+.body-contents{
+    min-width: 290px;
+    transition: all 0.2s ease-in;
+}
+.contents{
+    height: auto;
+}
+/*-------------------------------- barra de cima --------------------------*/
+.move-days{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
+    background: rgba( 0,0,0,0.8);
+    margin: 0 0 0 -9px;
+    padding: 0;
+    z-index: 10;
+}
+.move-days i, .move-days p{
+    position: absolute;
+    display: inline-block;
+}
+.move-days i:first-child{
+    left: 2%;
+    top: 20%;
+}
+.move-days i:last-child{
+    right: 2%;
+    top: 20%;
+}
+.move-days p{
+    width: 100%;
+    text-align: center;
+}
+/* ----------- caixa de criação de novas tarefas -------------*/
+
+.box-form-ini{
+    margin-top: 10%;
+    padding: 20px;
+    z-index: 200;
+    box-shadow: 0 0 6px 0 black;
+    background: rgba( 0,0,0,0.7);
+}
+
+        .box-form-ini input[type=text]{
+            text-align: left;
+            width: 100%;
+            background: transparent;
+            border:none;
+            color:white;
+            border-bottom: solid #1c1c1c 1px;
+            margin: 10px 0 10px 0 ;
+            font-size: 16px;
+        }
+
+        .box-form-ini input[type=text]:focus , .box-form-ini textarea:focus{
+            outline: none;
+        }
+
+        .box-form-ini textarea{
+            width: 100%;
+            height: 150px;
+            border: none;
+            background: transparent;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+
+        .box-form-ini .priority{
+             color: white;
+             text-align: center;
+             line-height: 80px;
+             width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+             margin: 0px 0 0 0.5%;
+         }
+        .box-form-ini .priority:active{
+            opacity: 0.4;
+        }
+        .box-form-ini .priority:first-child{
+            background-color: #E82700;
+        }
+        .box-form-ini .priority:nth-child(2){
+            background-color: #197D19;
+        }
+        .box-form-ini .priority:nth-child(3){
+            background-color: #0B7A96;
+        }
+
+
+/* -----------   card  -----------------*/
+.card{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+    overflow: hidden;
+    margin: 10px 0 10px 0;
+    position: relative;
+    background-color: #ffffff;
+}
+        .card .priority{
+            position: absolute;
+            right: 0;
+            top:0;
+            width: 20%;
+            height: 100%;
+            background: url("../images/ondulacao.png") rgba(  0, 0, 0, 0.5) repeat-y;
+
+        }
+        .card .title{
+            width: 70%;
+            border-bottom: solid #CCCCCC 1px;
+            padding: 5px;
+        }
+        .card .description{
+            height: auto;
+            width: 80%;
+            margin-bottom: 25px;
+            padding: 0 0 0 4px;
+            color: #888888;
+        }
+        .card .date{
+            position: absolute;
+            bottom: 0;
+            right: 22%;
+            margin: 2px;
+            width: auto;
+        }
+
+ /* -------------------  popup de detalhes da tasks -----------------------------*/
+
+.box-details-tasks{
+    background-color: #ffffff;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    left: 0;
+    top: 16%;
+    box-shadow: 0 0 40px 0 black;
+    z-index: 100000;
+    animation: show-in 0.1s;
+    -webkit-animation: show-in 0.3s;
+}
+        .box-details-tasks .title{
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: solid #CCCCCC 1px;
+            position: relative;
+        }
+                .box-details-tasks .priority, .box-details-tasks .exit-box{
+                    background-color: royalblue;
+                    width: 12%;
+                    height: 100%;
+                    top:0;
+                    right: 0;
+                    position: absolute;
+                }
+                .box-details-tasks .exit-box{
+                    width: 70px !important;
+                    height: 70px !important;
+                    right: 0%;
+                    z-index: 100;
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 20px;
+                    line-height: 70px;
+                    background-color: #4C4C4C;
+                    border-bottom-left-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    border-top-left-radius: 50%;
+                }
+        .box-details-tasks .description{
+            height: 200px;
+            width: 100%;
+            padding: 3px;
+            margin: 0 0 25px 0 !important;
+        }
+        .box-details-tasks .date{
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            margin: 2px;
+            width: auto;
+        }
+@-webkit-keyframes show-in {
+    0%{ transform: translateX(300px)}
+    100%{ transform: translateX(0px) }
+}
+/* ---------- menu lateral esquerda ------------- */
+.container-menu{
+    transition: all 1s linear;
+}
+        .menu-left{
+            position: fixed;
+            height: 100%;
+            width: 0px;
+            display: none;
+            background-color: #333333;
+            top: 0;
+            left:0;
+            margin: 0;
+            z-index: 11;
+            box-shadow: 0 0 5px 0 black;
+
+        }
+        .btn-add{
+            color: #ffffff;
+            text-align: center !important;
+            width: 100% !important;
+            height: 20% !important;
+            padding: 23% 0 0 0;
+            position: absolute;
+            bottom: 0;
+        }
