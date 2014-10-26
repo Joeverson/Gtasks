@@ -23,27 +23,27 @@ function events(){ // função onde vai ficar todos os eventos para o sistema
     jQuery( ".card" ).on( "tap", function( event ) {
         $('.contents').animate({ opacity: '0'}, 300);
         setTimeout(function(){
-            controllers.page("includes/popup.details.tasks.html", ".body-contents");
+            controllers.page(controllers.baseURL()+"includes/popup.details.tasks.html", ".body-contents");
         },100);
 
     });
 
     // chamada para abrir as tarefas do dia
     jQuery( ".box-details-tasks .exit-box" ).on( "tap", function( event ) {
-        controllers.page("includes/page.view.tasks.html", ".body-contents");
+        controllers.page(controllers.baseURL()+"includes/page.view.tasks.html", ".body-contents");
     });
 
     // chamada para adicionar uma nova task
     jQuery( ".btn-add" ).on( "tap", function( event ) {
         actions.hideMenu();
-        controllers.page("includes/page.new.task.html", ".body-contents");
+        controllers.page(controllers.baseURL()+"includes/page.new.task.html", ".body-contents");
     });
 
 
     // chamada para salvar a nova task
     jQuery( ".box-form-ini .priority" ).on( "tap", function( event ) {
         actions.hideMenu();
-        controllers.page("includes/page.view.tasks.html", ".body-contents");
+        controllers.page(controllers.baseURL()+"includes/page.view.tasks.html", ".body-contents");
     });
 
 
